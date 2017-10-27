@@ -1,13 +1,13 @@
 const album = {
-  title: 'The Colors',
-  artist: 'Pablo Picasso',
-  releaseInfo: '1909 Spanish Records',
-  albumArtUrl: 'assets/images/album_covers/01.png',
+  title: 'Tatuu\'s Fav 5',
+  artist: 'Various Artist',
+  releaseInfo: '2017',
+  albumArtUrl: 'assets/images/album_covers/10.png',
   songs: [
-    { title: 'Blue', duration: '161.71', soundFileUrl: 'assets/music/blue.mp3' },
-    { title: 'Green', duration: '103.96', soundFileUrl: 'assets/music/green.mp3' },
-    { title: 'Red', duration: '268.45', soundFileUrl: 'assets/music/red.mp3' },
-    { title: 'Pink', duration: '153.14', soundFileUrl: 'assets/music/pink.mp3' },
-    { title: 'Magenta', duration: '374.22', soundFileUrl: 'assets/music/magenta.mp3' }
+    { title: 'Parcels - Older', duration: '219.60', soundFileUrl: '"https://open.spotify.com/track/1kgws2l8gsvDhtsVyzWbu9' },
+    { title: 'Franz Ferdinand - Do You Want To', duration: '215.00', soundFileUrl: 'assets/music/Do You Want To.mp3' },
+    { title: 'Foals - My Number', duration: '240.53', soundFileUrl: 'assets/music/My Number.mp3' },
+    { title: 'Breakbot - Why (feat.Ruckazoid)', duration: '322.04', soundFileUrl: 'assets/music/Why (feat. Ruckazoid).mp3' },
+    { title: 'Roosevelt - Colours', duration: '259.80', soundFileUrl: 'assets/music/Colours.m4a' }
   ]
 };
