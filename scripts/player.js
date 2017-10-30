@@ -3,6 +3,7 @@ class Player {
     this.currentlyPlaying = album.songs[0];
     this.playState = 'stopped';
     this.volume = 80;
+    this.repeat = 'off';
     this.soundObject = new buzz.sound(this.currentlyPlaying.soundFileUrl);
   }
 

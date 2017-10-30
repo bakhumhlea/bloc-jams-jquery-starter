@@ -2,7 +2,7 @@ $( document ).ready(function() {
   album.songs.forEach( (song, index) => {
     song.element = $(`
       <tr>
-      <td>
+        <td>
           <button>
             <span class="song-number">${index + 1}</span>
             <span class="ion-play"></span>
@@ -16,8 +16,9 @@ $( document ).ready(function() {
 
     song.element.click( event => {
       player.playPause(song);
+      $('button#play-pause').attr('playState', player.playState);
     });
 
     $('#song-list').append(song.element);
   });
- });
+});
