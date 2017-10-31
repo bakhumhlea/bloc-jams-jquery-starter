@@ -14,18 +14,13 @@ class Player {
   getTime() {
     return this.soundObject.getTime();
   }
-
+  //time format
   prettyTime(timeInSeconds) {
+    //230.04 seconds to minutes 3:49
     var seconds = Math.floor(timeInSeconds);
     var minute = Math.floor(seconds/60)
     var second = seconds % 60;
-    var timeDisplay ="";
-    if (second < 10) {
-      timeDisplay = minute+":0"+second;
-    } else {
-      timeDisplay = minute+":"+second;
-    }
-    return timeDisplay;
+    return second < 10 ? minute+":0"+second:minute+":"+second;
   }
 
   playPause (song = this.currentlyPlaying) {
