@@ -53,4 +53,44 @@ $( document ).ready(function() {
      const previousSong = album.songs[previousSongIndex];
      player.playPause(previousSong);
    });
+
+   $('#time-control input').on('input', function (event) {
+     player.skipTo(event.target.value);
+   });
+
+   var currentVolume = player.setVolume(player.volume);
+   $('#volume-control input').val(currentVolume);
+   $('#volume-control input').on('input', function (event) {
+     $('#volume-control input').attr('value',event.target.value);
+     player.setVolume(event.target.value);
+   })
+
+   setInterval( () => {
+     const currentTime = player.getTime();
+     const duration = player.getDuration();
+     const percent = (currentTime / duration) * 100;
+     $('#time-control .current-time').text( player.prettyTime(currentTime));
+     $('#time-control .total-time').text( player.prettyTime(duration));
+     $('#time-control input').val(percent);
+     $('#time-control input').attr('value',percent);
+   }, 1000);
+
+   //I try to add code that execute when the song end and play the next song
+  // $('#time-control input').on('input', function(event) {
+  //   var enddingSongIndex = album.songs.indexOf(player.currentlyPlaying);
+  //   var nextPlayingIndex = enddingSongIndex + 1;
+  //   var playValue = $('#time-control input').value;
+  //   if (playValue == 100) {
+  //     if (nextPlayingIndex >= album.songs.length) {
+  //       if (player.repeat == 'on') {
+  //         nextPlayingIndex = 0;
+  //       } else {
+  //         return;
+  //       }
+  //     }
+  //   }
+  //   const playNext = album.songs[nextPlayIndex] ;
+  //   player.playPause(playNext);
+  // });
+
 });
