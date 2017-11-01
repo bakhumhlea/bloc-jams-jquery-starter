@@ -72,13 +72,13 @@ $( document ).ready(function() {
    setInterval( () => {
      const currentTime = player.getTime();
      const duration = player.getDuration();
-     const percent = (currentTime / duration) * 100;
+     const percent = Math.floor((currentTime / duration) * 100);
      $('#time-control .current-time').text( player.prettyTime(currentTime));
      $('#time-control .total-time').text( player.prettyTime(duration));
      $('#time-control input').val(percent);
      $('#time-control input').attr('value',percent);
 
-     if(percent === 98) {
+     if(percent === 100) {
        var enddingSongIndex = album.songs.indexOf(player.currentlyPlaying);
        var nextSongIndex = enddingSongIndex +1;
        if (nextSongIndex >= album.songs.length) {
