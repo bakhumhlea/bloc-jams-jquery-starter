@@ -6,6 +6,9 @@
   overflow: hidden;
   width: 100%;
 }
+@media (max-width:440px) {
+  #song-list {margin-top: 1.5rem;}
+}
 
 #song-number-column {
   width: 40px;
@@ -56,11 +59,23 @@ tr:hover .song-title {
 tr:last-child {
   border: none;
 }
+@media (max-width:440px) {
+  tr { font-size: 0.7rem; line-height: 1.5;}
+}
 
 td {
   padding: 0.75rem;
 }
-
+@media (max-width: 440px) {
+  td {padding: 0.4rem;}
+  #song-number-column {width: 25px;}
+  #song-duration-column {width: 35px;}
+}
+@media (max-width: 320px) {
+  td {padding: 0.3rem;}
+  #song-number-column {width: 25px;}
+  #song-duration-column {width: 35px;}
+}
 tr button {
   border: none;
   background: none;

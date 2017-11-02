@@ -1,4 +1,13 @@
 $( document ).ready(function() {
+  $('button#like').click( function() {
+    var likeStatus = $('button#like').attr('status');
+    if (likeStatus === 'unliked') {
+      $('button#like').attr('status','liked');
+    } else {
+      $('button#like').attr('status','unliked')
+    }
+  });
+
   $('button#play-pause').click( function() {
      player.playPause();
      $(this).attr('playState', player.playState);

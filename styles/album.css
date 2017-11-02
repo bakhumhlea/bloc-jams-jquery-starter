@@ -1,16 +1,18 @@
+
 html {
   font-size: 16px;
 }
 
 body {
-  background-image: url(../assets/images/blurred_backgrounds/blur_bg_3.jpg);
+  background-image: url(../assets/images/blurred_backgrounds/night-dark-blur.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;
   color: white;
-  font-family: 'Open Sans', sans-serif,'Montserrat','Lato';
-  src: url('https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet');
+  font-family: 'Open Sans', sans-serif,'Montserrat','Lato','Ubuntu','Merriweather','Rozha One';
+  src: url("https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet");
+  src: url("https://fonts.googleapis.com/css?family=Merriweather|Rozha+One|Ubuntu" rel="stylesheet");
 }
 
 nav {
@@ -21,11 +23,14 @@ nav {
 nav img {
   height: 50px;
 }
+@media (max-width:440px) {
+  nav img {display:block; margin: 0 auto 0 auto;}
+}
 
 main {
   width: 100%;
   max-width: 800px;
-  margin: 4rem auto 150px;
+  margin: 2rem auto 100px;
   padding: 0 1rem;
   box-sizing: border-box;
 }
@@ -40,23 +45,48 @@ main {
   position: relative;
   width: 250px;
   max-width: 33%;
+  border-radius: 50%;
+  border: 2px solid hsla(245, 40%, 75%, 1);
 }
 
 #album-title {
-  font-family: 'Montserrat';
-  font-size: 2.8rem;
-  font-weight: 400;
-  margin: 0;
+  font-family: 'Lato';
+  font-size: 3rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
-
 h2.artist {
-  font-weight: 100;
-  font-size: 1.4rem;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-size: 2.0rem;
   margin: 0.5rem;
-  opacity: 0.9;
+  opacity: 1.0;
 }
 
 #release-info {
-  opacity: 0.5;
-  font-size: 0.8rem;
+  opacity: 1.0;
+  font-size: 1.6rem;
+}
+@media (max-width: 600px) {
+  #album-title {font-size: 1.8rem;font-weight: 400;margin-top: 16px; margin-bottom: 5px;}
+  h2.artist {font-size: 1.2rem;}
+  #release-info {font-size: 1.0rem;}
+}
+@media (max-width: 440px) {
+  nav { background: hsla(0, 0%, 0%, 0.2);
+        padding: .5rem 1rem;}
+  main {margin-top: 1rem;}
+  tr {font-size: 14px;}
+  #album-cover-art {margin-right: 1.6rem;}
+  #album-title {font-size: 1.6rem;font-weight: 400;margin-top: 14px; margin-bottom: 5px;}
+  h2.artist {font-size: 1.0rem;}
+  #release-info {font-size: 0.8rem;}
+}
+@media (max-width: 320px) {
+  tr {font-size: 13px;}
+  #album-cover-art {margin-right: 1.0rem;}
+  #album-title {font-size: 1.2rem;font-weight: 400;margin-top: 12px; margin-bottom: 5px;}
+  h2.artist {font-size: 1.0rem;}
+  #release-info {font-size: 0.8rem;}
 }
