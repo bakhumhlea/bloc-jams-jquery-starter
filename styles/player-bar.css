@@ -108,15 +108,15 @@
 }
 @media (max-width: 440px) {
   #player-bar {height: 80px;}
-  #time-control {width: 220px; margin: 12px auto auto 5px; position: absolute; left: 2%;}
-  #time-control div {font-size: 0.8rem;}
+  #time-control {width: 240px; margin: 14px auto auto 5px; position: absolute; left: 2%;}
+  #time-control div {font-size: 0.65rem;}
   #volume-control { transform: translateY(10%);
                     display: block;
                     top: 58%;
                     margin: 0 5px 0 auto;
                     position: absolute;
                     right: 2%;
-                    width: 100px;}
+                    width: 110px;}
 }
 
 #volume-control input {
@@ -129,6 +129,7 @@ input[type=range] {
   background: none;
   margin-top: 7px;
 }
+
 input[type=range]:focus {
   outline: none;
   box-shadow: 2px 4px 3px hsla(0,0%,0%,0.25);
@@ -206,4 +207,7 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
   background: rgba(13, 13, 13, 0.4);
+}
+@media (max-width: 440px) {
+  input[type=range] {margin-top: 4px;}
 }
