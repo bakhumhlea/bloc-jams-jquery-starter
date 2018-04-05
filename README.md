@@ -17,7 +17,4 @@ DJ Tatuu Music Player Jquery is one of three developed projects, using different
 v0.01
 
 ## Demo
-You can checkout My Chat by follow this link [here](https://djtatuu.netlify.com/). 
-
-## Sending Feedback
-I am always open to [your feedback](https://github.com/bakhumhlea/dj-Tatuu-Jquery/issues).
+You can checkout My Chat by follow this link [here](https://djtatuu.netlify.com/).
